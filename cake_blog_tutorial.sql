@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2014 at 09:37 PM
--- Server version: 5.6.16
--- PHP Version: 5.5.11
+-- Generation Time: Jun 05, 2014 at 01:01 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `cake_blog_tutorial`
 --
+CREATE DATABASE IF NOT EXISTS `cake_blog_tutorial` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `cake_blog_tutorial`;
 
 -- --------------------------------------------------------
 
@@ -60,14 +62,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `modified` datetime DEFAULT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `role`, `created`, `modified`, `status`) VALUES
-(5, 'kalun', '95787ed96ae71bd8f1f5c5df416a8a97cea7a26a', 'kalun.lee1@gmail.com', 'visitor', '2014-06-04 11:28:22', '2014-06-04 15:14:00', 0);
+(5, 'kalun', '95787ed96ae71bd8f1f5c5df416a8a97cea7a26a', 'kalun.lee1@gmail.com', 'visitor', '2014-06-04 11:28:22', '2014-06-04 15:14:00', 0),
+(10, 'ericlol', 'fbfd21d240a7b043f52f05a1668afdf0ea3412aa', 'eric.acampora@gmail.com', 'visitor', '2014-06-04 23:14:56', '2014-06-04 23:14:56', 1),
+(11, 'ericlool', 'fbfd21d240a7b043f52f05a1668afdf0ea3412aa', 'eacampor@uci.edu', 'staff', '2014-06-04 23:18:02', '2014-06-04 23:18:02', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
